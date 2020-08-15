@@ -1,0 +1,76 @@
+
+
+{% extends "shop-nav.html" %}
+{% block content  %}
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static 'css/product_detail.css' %}">
+      
+
+
+    <div class="img-container">
+
+    <div type="button" class="btn btn-rounded btn-amber" style="position: absolute; top: -16%; left: 35%;"><i class="fas fa-th-list pr-2" aria-hidden="true"></i>Product Name</div>
+ <img  src="{% static 'img/1.png' %}" class="card-img-top" alt="...">   
+</div>
+
+
+
+  
+      <div class="row" >
+<!--from this to-->
+     
+         <div class="col-lg-10">
+               <h3>Product Detail</h3>
+                   <div class="post-media card  " style="max-width: 29rem; height: 40rem;" >
+                    
+        
+                      <button type="button" class="btn btn-outline-default waves-effect" >
+                        <i  class="fas fa-star pr-2" aria-hidden="true"></i><h8 style="color: rgb(89, 89, 216) ;">Price: 999$</h8></button>
+                    
+                        <div class="btn btn-outline-default waves-effect font-weight-bold" >
+                   
+                          <p style="color: rgb(89, 89, 216);">Free Delivery on order above Rs. 799</p>               
+                          <p  style="color: rgb(89, 89, 216);">Pay on delivery might be available</p>
+                          <p style="color: rgb(89, 89, 216);"> Easy 30 days returns and exchanges</p>                   
+                           <p style="color: rgb(89, 89, 216);">Try & Buy might be available</p>
+                          
+                        </div>
+
+                        <div class="btn btn-outline-default waves-effect font-weight-bold" style="height: 250px;">
+                          <p style="position: absolute; left: 2%; color: rgb(89, 89, 216);" >Color:</p>
+                              <br>  <br>
+                         <p style="position: absolute; left: 2%; color: rgb(89, 89, 216);"  >Size:</p>
+                         <br>  <br>
+                         <p style="position: absolute; left: 2%; color: rgb(89, 89, 216);" >Type:</p>
+                         <br>  <br>
+                         <p style="position: absolute; left: 2%; color: rgb(89, 89, 216);" >xxxx:</p>
+                         <br>  <br>
+                         <p style="position: absolute; left: 2%; color: rgb(89, 89, 216);" >xxxx</p>
+                         <br>  <br>
+                         <p style="position: absolute; left: 2%; color: rgb(89, 89, 216);" >xxxx</p>
+                          
+                        </div>
+                        
+                        
+                        <form class="d-flex justify-content" style="position: absolute; top: 86%; left: 20%;">
+                          <!-- Default input -->
+                          <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
+                          <button class="btn btn-primary btn-md my-0 p" type="submit">Add to cart
+                            <i class="fas fa-shopping-cart ml-1"></i>
+                          </button>
+            
+                        </form>
+
+                </div><!-- end blog-box -->
+            </div><!-- end col --> 
+          </div><!--Here-->        
+
+        
+</header>
+
+</body>
+
+</html>
+{% endblock %}

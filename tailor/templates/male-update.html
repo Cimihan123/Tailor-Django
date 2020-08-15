@@ -1,0 +1,187 @@
+
+{% extends "nav-base.html" %}
+{% load static %}
+{% block content %}
+        <br><br>
+        <!-- table--><link rel="stylesheet" href="{% static 'css/function.css' %}">
+       <form  method="post" >
+        <div class="conatiner">
+        <div class="card-deck"> 
+                 <div class="card">
+ <div class="card-body"><br>
+                
+                <div >
+                    <h1>Contact-Details</h1>   
+                </div><br> 
+                <div id="contact">
+              <h1   class="btn btn-primary" style="width: fit-content;" data-toggle="h1" aria-pressed="false">Name</h1>
+                  
+              {{c_form.name}}
+               </div>
+              </br></br> 
+               <div id="contact">
+              <h1  class="btn btn-primary" style="width: fit-content;" data-toggle="h1" aria-pressed="false">Age</h1>
+              
+               {{c_form.age}}
+              </br></br>
+               <div id="contact">
+              <h1    class="btn btn-primary" style="width: fit-content;" data-toggle="h1" aria-pressed="false">Address</h1>
+            
+              {{c_form.address}}
+               </div>
+            </br></br>
+             <div id="contact">
+            <h1    class="btn btn-primary" style="width: fit-content;" data-toggle="h1" aria-pressed="false">Number</h1>
+             {{c_form.number}}
+             </div>
+           </br></br>
+            <div id="contact">
+            <h1    class="btn btn-primary" style="width: fit-content;" data-toggle="h1" aria-pressed="false">Type</h1>
+             {{c_form.type}}
+            </div><br>
+            <div id="contact">
+            <h1    class="btn btn-primary"  style="width: fit-content; position: relative; right: 65px;"  data-toggle="h1" aria-pressed="false">Gender</h1>
+             {{c_form.gender  }}
+          
+            </div>  <br>
+            <div id="contact">
+            <h1    class="btn btn-primary" style="width: fit-content;" data-toggle="h1" aria-pressed="false">Order-Date</h1>
+            {{c_form.order_date}}
+            </div><br>
+            <div id="contact">
+            <h1    class="btn btn-primary" style="width: fit-content;" data-toggle="h1" aria-pressed="false">Issue-Date</h1>
+            {{c_form.issue_date}}
+            </div>
+     <div id="contact">
+            <h1    class="btn btn-primary" style="width: fit-content; position: relative; right: 110px;"  data-toggle="h1" aria-pressed="false">Check</h1>
+            {{c_form.checkbox}}
+            </div>
+        
+          
+          
+          <br>
+                    </div>
+                  </div>
+        </div>
+  
+
+       
+
+
+            <div class="card">
+             
+              <div class="card-body">
+              
+                <br>    
+                      <!-- Default checked -->
+
+                <div>
+                    <h1 >Women-Measurement</h1>  
+                </div><br><!-- Default unchecked -->
+
+
+                        <div id="women">
+
+        {% csrf_token %}
+                  
+                {{m_form.neck}}
+                <h1  disabled  class="btn btn-primary" data-toggle="h1" aria-pressed="false">Neck</h1>
+                 
+                  </br></br>  {{m_form.chest}}
+                  <h1   class="btn btn-primary" data-toggle="h1" aria-pressed="false">Chest</h1>
+                
+               
+                 </br></br> {{m_form.seat}}
+                 <h1  class="btn btn-primary" style="width: fit-content;" data-toggle="h1" aria-pressed="false">Seat</h1>
+               
+                </br></br>  {{m_form.shoulder_width}}
+                <h1   class="btn btn-primary" data-toggle="h1" aria-pressed="false">Shoulder width</h1>
+              
+                </br></br> {{m_form.arm_length}}
+            
+                <h1  class="btn btn-primary" data-toggle="h1" aria-pressed="false">Arm length</h1>
+              
+               </br></br>{{m_form.wrist}}
+               <h1  class="btn btn-primary" style="width: fit-content;" data-toggle="h1" aria-pressed="false">Wrist</h1>
+                
+                    
+                </br></br> {{m_form.hip}}
+                <h1   class="btn btn-primary" data-toggle="h1" aria-pressed="false">Hip   </h1>
+            
+                </br></br>  {{m_form.bicep}}
+                <h1   class="btn btn-primary" data-toggle="h1" aria-pressed="false">Biceps</h1>
+                
+                </br></br> {{m_form.full_back_length}}
+                <h1  class="btn btn-primary" style="width: fit-content;" data-toggle="h1" aria-pressed="false"> Back Length</h1>
+
+
+                   </br></br>  {{m_form.right_sleeve}}
+                <h1   class="btn btn-primary" data-toggle="h1" aria-pressed="false">Right Sleeve</h1>
+                
+                </br></br> {{m_form.left_sleeve}}
+                <h1  class="btn btn-primary" style="width: fit-content;" data-toggle="h1" aria-pressed="false"> Left Sleeve</h1>
+         
+      
+             
+            </br></br>{{m_form.wrist}}
+              <h1  class="btn btn-primary" style="width: fit-content;" data-toggle="h1" aria-pressed="false">Wrist</h1>
+               
+                   
+               </br></br> {{m_form.hip}}
+               <h1   class="btn btn-primary" data-toggle="h1" aria-pressed="false"> Hips/Seat </h1>
+           
+               </br></br> {{m_form.waist}}
+               <h1  class="btn btn-primary" data-toggle="h1" aria-pressed="false">Waist/Stomach </h1>
+      
+
+               </br></br>  {{m_form.front_chest_width}}
+               <h1   class="btn btn-primary" data-toggle="h1" aria-pressed="false">Front Chest Width</h1>
+               
+          
+             
+               </br></br>  {{m_form.full_shoulder_width}}
+               <h1   class="btn btn-primary" data-toggle="h1" aria-pressed="false">Full Shoulder Width</h1>
+               
+  
+               </br></br>{{m_form.thigh}}
+               <h1  class="btn btn-primary" style="width: fit-content;" data-toggle="h1" aria-pressed="false">Thigh</h1>
+           
+             
+             
+       
+             </br></br>{{m_form.full_back_length}}
+             <h1  class="btn btn-primary" style="width: fit-content;" data-toggle="h1" aria-pressed="false"> Full back length</h1>
+            <button type="h1"  style="width: 20%; font-size: small;  position: absolute; right:140%; top:60%;" class="btn btn-danger"  aria-pressed="false">Submit</button>
+
+            
+              <div>
+              
+              </div>
+            </div>
+</div>
+</form>
+
+<script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+
+{% endblock %}

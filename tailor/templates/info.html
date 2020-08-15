@@ -1,0 +1,75 @@
+{% extends "nav-base.html" %}
+{% load static%}
+{% block content  %}
+<link rel="stylesheet" href="{% static 'css/function.css' %}">
+<br><br><br>
+        <!-- table-->
+    <div class="table-responsive-sm">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone-Number</th>
+                <th scope="col">Address</th>
+                <th scope="col">Gender</th> 
+                <th scope="col">Type</th>
+                <th scope="col">Ordered-Date</th>
+                <th scope="col">Date-To-Issue </th>
+                <th scope="col">Check</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>  
+              </tr>
+            </thead>
+            <tbody>
+            {% for contact in contacts %}
+              <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{contact.name}}</td>
+                <td>+{{contact.number}}</td>
+                <td>{{contact.address}}</td>
+                <td>{{contact.gender}}</td>
+                <td>{{contact.type}}</td>
+                <td>{{contact.order_date}}</td>
+                <td>{{contact.issue_date}}</td>
+                <td> <input type="checkbox" name="checkbox" {% if contact.checkbox %}checked{% endif %} /></td>                                   
+               
+                
+                {% if contact.gender == 'female' %}
+                <td><a style='color: blue;' href="{% url 'contact-female' contact.pk %}">Update</a></td>
+                {% else %}
+                <td><a style='color: blue;' href="{% url 'contact-male' contact.pk %}">Update</a></td>
+                {%  endif  %}
+                <td><a style='color: blue;' href="{% url 'delete' contact.pk %}">Delete</a></td>  
+                
+                
+              </tr>
+            
+            {% endfor %}
+
+            </tbody>
+          </table>
+     </div>
+     <script>
+     //Get the button
+     var mybutton = document.getElementById("myBtn");
+     
+     // When the user scrolls down 20px from the top of the document, show the button
+     window.onscroll = function() {scrollFunction()};
+     
+     function scrollFunction() {
+       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         mybutton.style.display = "block";
+       } else {
+         mybutton.style.display = "none";
+       }
+     }
+     
+     // When the user clicks on the button, scroll to the top of the document
+     function topFunction() {
+       document.body.scrollTop = 0;
+       document.documentElement.scrollTop = 0;
+     }
+     </script>
+
+{% endblock %}

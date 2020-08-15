@@ -1,0 +1,66 @@
+.img-container{
+    
+ position: absolute;
+
+ left: 20%;
+ bottom: 10%;
+ height: 500px;
+ width: 600px;
+    
+
+    
+}
+
+
+figcaption{
+
+    position: absolute;
+   
+
+    left: 26%;
+    bottom: 26%
+
+}
+
+
+
+  
+  h3{
+
+ position: relative;
+left: 300%;
+  }
+
+
+
+    /* Style the counter cards */
+.card {
+
+        position: aboslute;
+        left: 270%;
+      
+    
+
+        width: 700px;
+        padding: 16px;
+        text-align: center;
+        background-color:whitesmoke;
+        
+    }
+  
+  
+
+.row{
+
+  position: absolute; 
+  top: 15%; 
+  right: 70%;
+
+
+}
+
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
